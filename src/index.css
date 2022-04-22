@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.center {
+    @apply flex justify-center items-center
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.play-btn {
+    box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
 }
+.play-btn:active {
+    box-shadow:  -4px -4px 10px rgba(0, 0, 0, 0.8), 4px 4px 10px rgba(255, 255, 255, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), inset -4px -4px 10px rgba(255, 255, 255, 0.4);
+
+}
+
+.player {
+    @apply center gap-3 flex-col w-10/12 sm:w-11/12 sm:max-w-lg md:max-w-2xl h-[98%]   mx-auto bg-gray-800 rounded-2xl md:px-8
+} 
